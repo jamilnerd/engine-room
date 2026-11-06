@@ -4,7 +4,11 @@
     "leader": "ctrl+x",
     "app_exit": "ctrl+d,<leader>q",
     "input_clear": "ctrl+c",
-    "input_newline": "alt+enter"
+    "input_newline": "alt+enter",
+    "messages_half_page_up": "pageup",
+    "messages_half_page_down": "pagedown",
+    "messages_line_up": "alt+pageup",
+    "messages_line_down": "alt+pagedown"
   },
   "scroll_acceleration": {
     "enabled": true

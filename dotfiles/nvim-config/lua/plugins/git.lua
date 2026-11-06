@@ -19,8 +19,8 @@ return {
                 }
             })
             vim.keymap.set('n', '<leader>gd', '<cmd>Gitsigns diffthis<cr>', { silent = true })
-            vim.keymap.set('n', '[c', '<cmd>Gitsigns nav_hunk prev<cr>', { silent = true })
-            vim.keymap.set('n', ']c', '<cmd>Gitsigns nav_hunk next<cr>', { silent = true })
+            -- vim.keymap.set('n', '[c', '<cmd>Gitsigns nav_hunk prev<cr>', { silent = true })
+            -- vim.keymap.set('n', ']c', '<cmd>Gitsigns nav_hunk next<cr>', { silent = true })
             vim.keymap.set('n', '<leader>gp', '<cmd>Gitsigns preview_hunk<cr>', { silent = true })
             vim.keymap.set('n', '<leader>gs', '<cmd>Gitsigns stage_hunk<cr>', { silent = true })
             vim.keymap.set('n', '<leader>gr', '<cmd>Gitsigns reset_hunk<cr>', { silent = true })

@@ -1,90 +1,12 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "autoupdate": true,
-  "agent": {
-    "build": {
-      "permission": "allow"
-    },
-    "plan": {
-      "permission": {
-        "edit": "deny",
-        "bash": "deny",
-        "task": "deny"
-      }
-    },
+  "default_agent": "build",
+  "disabled_providers": ["amazon-bedrock", "azure", "openai", "openrouter"],
+  "experimental": {
+    "disable_paste_summary": true
   },
-  "command": {
-    "download-polarion-document": {
-      "description": "Download a document from Polarion",
-      "template": "@systems-and-requirements-engineer call the Python CLI tool in script ~/.config/opencode/tools to download reqs. read the help and use the tool `question` to ask me questions for the needed CLI tool inputs. Use the following defaults: project id: `AR_DKS`, space id: `Interfaces`, document id: `ARDKS_SYS_021`, filter: `\"type:heading or status:approved\"`."
-    },
-    "neovim": {
-      "description": "@nerd answer from internal knowledge skills",
-      "template": ""
-    }
-  },
-  "default_agent": "plan",
-  "instructions": [
-    "AGENTS.md",
-     "~/.config/opencode/AGENTS.md"
-  ],
-  "lsp": {
-    "ty": {
-      "command": ["uv", "run", "ty", "server"],
-      "extensions": [".py"]
-    },
-    "pyright": {
-      "disabled": true
-    },
-    "ruff": {
-      "command": ["uv", "run", "ruff", "server"],
-      "extensions": [".py"]
-    }
-  },
-  "disabled_providers": ["genaihub", "openai"],
-  "enabled_providers": ["github-copilot", "opencode"],
+  "instructions": ["AGENTS.md"],
   "small_model": "github-copilot/claude-haiku-4.5",
-  "provider": {
-    "genaihub": {
-      "npm": "file:///home/nerd/engine-room/dotfiles/opencode/ai-sdk-genaihub/dist/index.js",
-      "name": "GenAI Hub (DB)",
-      "env": ["AWS_BEARER_TOKEN_BEDROCK"],
-      "models": {
-        "claude-opus-4-6": {
-          "id": "eu.anthropic.claude-opus-4-6-v1",
-          "name": "Claude Opus 4.6 (EU)",
-          "cost": {
-            "input": 5.94,
-            "output": 29.7,
-            "cache_read": 0.594,
-            "cache_write": 7.425
-          }
-        },
-        "claude-sonnet-4-5": {
-          "id": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
-          "name": "Claude Sonnet 4.5 (EU)",
-          "cost": {
-            "input": 3.564,
-            "output": 17.82,
-            "cache_read": 0.3564,
-            "cache_write": 4.455
-          }
-        },
-        "claude-sonnet-4-6": {
-          "id": "eu.anthropic.claude-sonnet-4-6",
-          "name": "Claude Sonnet 4.6 (EU)",
-          "cost": {
-            "input": 3.564,
-            "output": 17.82,
-            "cache_read": 0.3564,
-            "cache_write": 4.455
-          }
-        }
-      },
-      "options": {
-        "baseURL": "https://genaihub-gateway.genai-prod.comp.db.de/claude",
-        "apiKey": "{env:AWS_BEARER_TOKEN_BEDROCK}"
-      }
-    }
-  }
+  "plugin": ["/home/nerd/dev/dbgitlab/genai-anthropic-proxy/opencode-plugin"]
 }

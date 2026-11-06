@@ -85,22 +85,22 @@ vim.g.top = function()
 end
 vim.g.FormatCode = function()
     vim.cmd("pyfile ~/engine-room/dotfiles/nvim-config/jopilot/src/jopilot/format.py")
-    if vim.bo.filetype == "python" then
-        if next(vim.lsp.get_clients { bufnr = vim.api.nvim_get_current_buf(), method = "textDocument/codeAction" }) ~= nil then
-            local has_code_action = false
-            vim.lsp.buf.code_action {
-                context = { only = { "source.organizeImports.ruff" } },
-                filter = function(_)
-                    if not has_code_action then
-                        has_code_action = true
-                        return true
-                    end
-                    return false
-                end,
-                apply = true,
-            }
-        end
-    end
+    -- if vim.bo.filetype == "python" then
+    --     if next(vim.lsp.get_clients { bufnr = vim.api.nvim_get_current_buf(), method = "textDocument/codeAction" }) ~= nil then
+    --         local has_code_action = false
+    --         vim.lsp.buf.code_action {
+    --             context = { only = { "source.organizeImports.ruff" } },
+    --             filter = function(_)
+    --                 if not has_code_action then
+    --                     has_code_action = true
+    --                     return true
+    --                 end
+    --                 return false
+    --             end,
+    --             apply = true,
+    --         }
+    --     end
+    -- end
 end
 vim.g.WorkingTimesCompute = function()
     vim.api.nvim_command("write")

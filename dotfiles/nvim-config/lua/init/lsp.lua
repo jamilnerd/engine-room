@@ -50,6 +50,7 @@ vim.lsp.config("diagnosticls", {
                     '--stdin',
                     '--disable',
                     'MD013', -- line length
+                    'MD024', -- no-duplicate-heading (want to be able to have # step x with ## inputs and ## outputs for multiple steps in a single file)
                 },
                 offsetLine = 0,
                 offsetColumn = 0,

@@ -37,7 +37,7 @@ from kitty.boss import Boss, which  # type: ignore[import]
 
 GOOGLE_DRIVE_PATH = (
     pathlib.Path.home()
-    / "Library/CloudStorage/GoogleDrive-raichouni@gmail.com/My Drive"
+    / "Library/CloudStorage/GoogleDrive-jamil.elkhadra@gmail.com/My Drive"
 )
 ASSETS_PATH = GOOGLE_DRIVE_PATH / "assets"
 DB_PATH = GOOGLE_DRIVE_PATH / "jamil.kdbx"

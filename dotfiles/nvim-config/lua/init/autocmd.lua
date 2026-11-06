@@ -192,7 +192,7 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     callback = function()
         -- Skip formatting
         local filename = vim.fn.expand('%:t')
-        if filename == "CHEATSHEET.md" or filename == "p10k.zsh" then
+        if filename == "AGENTS.md" or filename == "CHEATSHEET.md" or filename == "p10k.zsh" then
             return
         end
         local format_on_save = {

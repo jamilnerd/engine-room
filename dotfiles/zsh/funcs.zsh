@@ -139,7 +139,7 @@ venv() {
   deactivate
   [[ -f .python-version ]] && rm .python-version
   [[ -d .venv ]] && rm -rf .venv
-  VERSION=${1:-3.14.7}
+  VERSION=${1:-3.15.2}
   uv venv --python=$VERSION .venv
   source .venv/bin/activate
   uv pip install --upgrade pip

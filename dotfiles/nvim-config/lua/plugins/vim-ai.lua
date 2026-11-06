@@ -6,6 +6,7 @@ return {
     -- https://github.com/madox2/vim-ai (ChatGPT in Neovim) {{{
     {
         "madox2/vim-ai",
+        disable = true,
         cmd = { "AI", "AIChat", "AIEdit", "AINewChat", "AIRedo", "AIUtilRolesOpen", "AIUtilDebugOff", "AIUtilDebugOn" },
         ft = "aichat",
         keys = {

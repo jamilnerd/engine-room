@@ -1,6 +1,9 @@
 aiofiles  # needed by entrypoint.py
+behave
 PyYAML  # needed by entrypoint.py
 ipython
+jinja2
+lxml
 pdftotext
 pyfzf
 pynvim

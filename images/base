@@ -43,7 +43,7 @@ RUN curl -Lo /tmp/install.sh https://astral.sh/uv/install.sh && \
   chmod +x /tmp/install.sh && \
   UV_NO_MODIFY_PATH=1 sh /tmp/install.sh && \
   rm /tmp/install.sh && \
-  uv python install --no-cache --default 3.14.7 && \
+  uv python install --no-cache --default 3.15.2 && \
   uv venv --seed /opt/.venv && \
   chmod -R 777 /opt/.venv/bin && \
   chmod -R 777 /opt/.venv/lib/python*/site-packages && \
@@ -187,16 +187,22 @@ RUN zsh -c "source /home/nerd/.nvm/nvm.sh && \
   nvm use default && \
   npm install -g \
   @mermaid-js/mermaid-cli \
+  @opencode/cli \
   @prettier/plugin-xml \
   allure \
   markdownlint-cli \
-  opencode-ai \
   prettier \
   prettier-plugin-jinja-template \
   prettier-plugin-sh \
   prettier-plugin-tailwindcss \
   prettier-plugin-toml \
   yarn"
+# }}}
+
+# OpenCode {{{
+# USER root
+# RUN curl -fsSL https://opencode.ai/v2/install | bash && \
+#   install -m 0755 /root/.opencode/bin/opencode /usr/local/bin/opencode
 # }}}
 
 # hadolint (Dockerfile linter) {{{
@@ -217,4 +223,3 @@ RUN if [ "$WITH_OLLAMA" = "true" ]; then \
 
 USER root
 ENTRYPOINT ["python3", "/home/nerd/engine-room/supervisor.py"]
-

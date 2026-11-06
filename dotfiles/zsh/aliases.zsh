@@ -24,6 +24,8 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
 
+alias starsatoc-7331='cd ~/dev/dbgitlab/ivv-test-case-auditor-spec'
+alias starsatoc-7352='cd ~/dev/dbgitlab/ivv-deprecated-test-case-reporter-spec'
 alias 3rd='cd ~/dev/3rdparty'
 alias ardks='cd ~/dev/dbgitlab/ar-dks'
 alias atr='cd /opt/bind/dev/dbgitlab/atoc-test-runner'
@@ -32,6 +34,7 @@ alias ck='cd ~/.config/kitty'
 alias cn='cd ~/.config/nvim'
 alias co='cd ~/.config/opencode'
 alias d='cd ~/dev'
+alias dev='cd ~/dev'
 alias dbgl='cd ~/dev/dbgitlab'
 alias dot='cd ~/engine-room/dotfiles'
 alias er='cd ~/engine-room'
@@ -43,7 +46,9 @@ alias mbse='cd ~/dev/github/capellambse'
 alias mdd='cd ~/dev/dbgitlab/mddocgen'
 alias o='cd ~/.config/opencode'
 alias oddp='cd ~/dev/dbgitlab/oddp'
-alias osc='cd ~/dev/dbgitlab/nextrail-obu-connection-handler'
+alias osc='cd ~/dev/dbgitlab/obu-sim-client'
+alias rev='cd ~/dev/dbgitlab/review-test-artifacts'
+alias sdd='cd /home/nerd/dev/dbgitlab/cookiecutter-agent-spec-template/{{cookiecutter.project_directory_name}}-spec'
 alias tmp='cd /tmp'
 alias ws='cd /opt/bind/workspaces'
 alias x='cd /opt/bind/x'
@@ -75,7 +80,7 @@ alias rpdb='nc localhost 4444'
 alias termcolors='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+"\n"}; done'
 alias tree='tree -C'
 alias vi='$EDITOR'
-alias via="$EDITOR -c'lua vim.g.opencode()'"
+alias via='[[ -d .git ]] && $EDITOR -c"G" -c"TabooRename Git" -c"tabnew" -c"TabooRename TEMPLATE" -c"Oil /home/nerd/dev/dbgitlab/cookiecutter-agent-spec-template/{{cookiecutter.project_directory_name}}" -c"tabnew" -c"tabmove-2" -c"TabooRename dev" -c"lua vim.g.opencode(true)" -c"file term://opencode"|| $EDITOR -c"lua vim.g.opencode(true)" -c"TabooRename dev"'
 alias vib="vi -c'AIC /b'"
 alias vic="$EDITOR -c'terminal claude' -c'startinsert'"
 alias vid='$EDITOR -c"TabooRename dev" -c"tabe +G" -c"TabooRename Git" -c"2tabnew" -c"TabooRename opencode" -c"lua vim.g.opencode(true)" -c"normal 1tabnext" -c"stopinsert" -c"file term://opencode" -c"1tabnext"'
@@ -112,5 +117,5 @@ alias source-file='source_file'
 
 # if uname == Darwin, add macOS specific aliases
 if [[ "$(uname -o)" == *"Darwin"* ]]; then
-  alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/Users/jamilraichouni/Applications installer=nightly'
+  alias kittyupdate='curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin dest=/Users/jamilraichouni/Applications'
 fi

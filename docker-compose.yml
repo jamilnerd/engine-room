@@ -76,7 +76,6 @@ services:
       - "8000:8000"
       - "8001:8001"
       - "7777:7777"
-      - "8888:8888"
       - "9090:9090"
     environment:
       <<: *common-environment
@@ -110,7 +109,7 @@ services:
       - /tmp:/tmp
       - /var/run/docker.sock:/var/run/docker.sock
       - dbmac:/mnt/volume
-      - $HOME/Library/CloudStorage/GoogleDrive-raichouni@gmail.com:/mnt/googledrive
+      - $HOME/Library/CloudStorage/GoogleDrive-jamil.elkhadra@gmail.com:/mnt/googledrive
       - $HOME/Library/CloudStorage/ProtonDrive-janerd@proton.me-folder:/mnt/proton
   capella-6.0.0:
     # Start: `docker compose up -d capella-6.0.0`

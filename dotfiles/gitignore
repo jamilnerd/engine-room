@@ -6,6 +6,7 @@
 .ipy*.py
 .ipy.ipynb
 .jobs
+.me-tmp/
 .pdbrc
 .process_jobs.sh
 .python-version

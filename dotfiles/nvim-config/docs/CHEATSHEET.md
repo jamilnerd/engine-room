@@ -81,6 +81,20 @@ gQ - Ex mode (exit with :vi)
 `zG` - add word under cursor to dictionary for current filetype only
 `z=` - suggest spelling corrections for word under cursor
 
+## Horizontal scrolling
+
+Equivalents to zt and zb:
+
+zs  " Place the cursor column at the left edge
+ze  " Place the cursor column at the right edge
+
+For fixed horizontal scrolling:
+
+[count]zh  " Scroll left
+[count]zl  " Scroll right
+zH          " Scroll left by half a screen
+zL          " Scroll right by half a screen
+
 ## Miscellaneous
 
 CTRL-W f  - Split current window in two.  Edit file name under cursor.
